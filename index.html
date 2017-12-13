@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="ISO-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fast Service - P&aacute;gina Inicial</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.gif" type="image/x-icon" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/justified-nav.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <body>
+    <header>
+	<a name="#topo"/>
+      <div class="bar"></div>
+      <div class="logo" align="center">
+        <a href="index.html"><img src="img/logo.png" alt="Logo da empresa Fast Service" title="Logo da empresa Fast Service" width="250px"  class="img-responsive" alt="LogoMarca da empresa Fast Service"/></a>
+      </div>
+      <div class="bar"></div>
+      <div class="container align-top">
+        <div class="masthead">
+          <nav>
+            <ul class="nav nav-justified">
+              <li class="active"><a href="index.html">P&aacute;gina Inicial</a></li>
+              <li><a href="quemSomos.html">Quem somos</a></li>
+              <li><a href="servicos.html">Servi&ccedil;os</a></li>
+              <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">Cadastro</a></li>
+              <li><a href="contatos.html">Contato</a></li>
+              <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Acesso ao Sistema</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+	  <!-- Janela Modal Acesso Sistema -->
+	  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Escolha o perfil desejado</h4>
+				</div>
+				<div class="modal-body" align="center" style="height:250px;">
+					<div class="caixa-modal">
+						<a href="entrarCliente.html">
+							<img class="img-circle" style="left:70px; position: relative;"src="img/cliente.png" alt="Acesso do Cliente" title="Acesso do Cliente" width="140" height="140">
+							<h4 class="modal-title align-text-modal">Acesso de Cliente</h4>
+						</a>
+					</div>
+					<div class="caixa-modal">
+						<a href="entrarFuncionario.html">
+							<img class="img-circle" style="left:70px; position: relative;"src="img/empregado.png" alt="IAcesso do Funcionário" title="Acesso do Funcionário" width="140" height="140">
+							<h4 class="modal-title align-text-modal">Acesso de Funcionário</h4>
+						</a>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	  </div>
+
+	  <!-- Janela modal cadastro -->
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Escolha o cadastro desejado</h4>
+				</div>
+				<div class="modal-body">
+					<img class="img-circle" style="left:70px; position: relative;"src="img/cliente.png" alt="Cadastro do Cliente" title="Cadastro do Cliente" width="140" height="140">
+					<h5 class="text-center"><strong>Cadastro para cliente</strong></h5>
+					<p class="text-center">Nesta área você poderá se cadastrar para contratar os serviços desejados.</p>
+					<a href="cadastroCliente.html"><button class="btn btn-primary" style="left:85px; position: relative;">Cadastre-se</button></a>
+					<hr class="featurette-divider">
+					<img class="img-circle" style="left:70px; position: relative;"src="img/empregado.png" alt="Cadastro de Funcionário" title="Cadastro do Funcionário" width="140" height="140">
+					<h5 class="text-center"><strong>Cadastro para funcionário</strong></h5>
+					<p class="text-center">Nesta área você poderá se cadastrar para se candidatar a alguma vaga existe.</p>
+					<a href="cadastroFuncionario.html"><button class="btn btn-primary" style="left:85px; position: relative;">Cadastre-se</button></a>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    </header>
+    <section>
+		<div class="container marketing" style="margin-top:20px;">
+		<h3 class="modal-title" id="myModalLabel">Destaques</h3>
+		<hr class="featurette-divider">
+			<div class="row">
+				<div class="col-lg-4">
+					<img class="img-circle align-image-marketing " src="img/servicos.png" alt="Imagem referente a Serviços da Empresa" title="Imagem referente a Serviços da Empresa" width="140" height="140">
+					<span style="text-align:center;"><h2>Serviços</h2></span>
+					<p class="text-center">Nossos serviços são realizados com garantia de qualidade e segurança para todos os nossos clientes.</p>
+					<p class="text-center"><a class="btn btn-default" href="servicos.html" role="button">Nossos serviços &raquo;</a></p>
+				</div>
+				<div class="col-lg-4">
+					<img class="img-circle align-image-marketing " src="img/orcamento.png" alt="Imagem referente a orçamentos" title="Imagem referente a orçamentos" width="140" height="140">
+					<span style="text-align:center;"><h2>Orçamento</h2></span>
+					<p class="text-center">Nossa empresa oferece o preço mais acessível do mercado para todos so nossos clientes.</p>
+					<p class="text-center"><a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target=".bs-example-modal-sm">Faça seu cadastro &raquo;</a></p>
+				</div>
+				<div class="col-lg-4">
+					<img class="img-circle align-image-marketing " src="img/aviao.png" alt="Cobertura" title="Cobertura" width="140" height="140">
+					<span style="text-align:center;"><h2>Cobertura</h2></span>
+					<p class="text-center">Nossa empresa oferece serviços em todo país, trazendo para todos a qualidade de serviços da Fast Service.</p>
+					<p class="text-center"><a class="btn btn-default" href="quemSomos.html" role="button">Conheça nossa empresa &raquo;</a></p>
+				</div>
+			</div>
+			<h3 class="modal-title" id="myModalLabel">Alguns serviços</h3>
+			<hr class="featurette-divider">
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2 class="featurette-heading">Conheça alguns dos serviços mais procurados pelos nossos clientes.</h2>
+					<p class="lead text-justify">A empresa possui uma grande diversidade de profissionais qualificados para todos os tipos de serviços que oferecemos para os nossos clientes, sendo como por exemplo, serviços de doméstica, passadeira, cuidador de idosos, dentre outros.</p>
+				</div>
+				<div class="col-md-5">
+					<img class="featurette-image img-responsive center-block border-image-banner" src="img/banner1.png" alt="Serviço de Doméstica" title="Serviço de Doméstica">
+				</div>
+			</div>	
+			<hr class="featurette-divider">
+			<div class="row featurette">
+				<div class="col-md-7 col-md-push-5">
+					<h2 class="featurette-heading">Passadeira. <span class="text-muted">Fast Service facilitando sua vida.</span></h2>
+					<p class="lead">Nada incomoda mais do que chegar em casa após um dia exaustivo de trabalho e ter uma pilha de roupa para passar. O acumulo de roupas no pós-viagem, bem como em situações comuns do dia a dia às vezes exige reforços. Nós estamos pronto para ajudar você! <a class="btn btn-link" href="servicos.html" role="button">Saiba mais &raquo;</a></p>
+				</div>
+				<div class="col-md-5 col-md-pull-7">
+					<img class="featurette-image img-responsive center-block border-image-banner" src="img/banner2.jpg" alt="Passadeira" title="Serviço de Passadeira" width="400px">
+				</div>
+			</div>
+			<hr class="featurette-divider">
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2 class="featurette-heading">Cuidador de idosos. <span class="text-muted">Maior cuidado com a vida.</span></h2>
+					<p class="lead">Há muitas formas de envelhecer, mas algumas provocam mudanças que geram um excesso de trabalho ou responsabilidade para um dos membros da família, é neste momento que a família deve pensar em contratar um profissional habilitado para cuidar do idoso. <a class="btn btn-link" href="servicos.html" role="button">Saiba mais &raquo;</a></p>
+				</div>
+				<div class="col-md-5">
+					<img class="featurette-image img-responsive center-block border-image-banner" src="img/banner3.png" alt="Cuidador de idoso" title="Serviço de Cuidadora">
+				</div>
+			</div>
+		<hr class="featurette-divider">
+		</div>
+    </section>
+	<div class="bar-footer"></div>
+	<div class="container-fluid footer">
+		<div class="container">
+			<footer>
+				<p class="pull-right"><a href="#">Voltar para o topo</a></p>
+				<p style="color:#FFF;">&copy; 2016 Fast Service - Todos os direitos reservados.</p>
+			</footer>
+		</div>
+	</div>
+    <!-- jQuery do Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

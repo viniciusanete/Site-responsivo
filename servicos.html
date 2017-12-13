@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fast Service - Serviços</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.gif" type="image/x-icon" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/justified-nav.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+  <body>
+    <header>
+	<a name="#topo"/>
+      <div class="bar"></div>
+      <div class="logo" align="center">
+        <a href="index.html"><img src="img/logo.png" alt="Logo da empresa Fast Service" title="Logo da empresa Fast Service" width="250px"  class="img-responsive" alt="LogoMarca da empresa Fast Service"/></a>
+      </div>
+      <div class="bar"></div>
+      <div class="container align-top">
+        <div class="masthead">
+          <nav>
+            <ul class="nav nav-justified">
+              <li><a href="index.html">P&aacute;gina Inicial</a></li>
+              <li><a href="quemSomos.html">Quem somos</a></li>
+              <li class="active"><a href="servicos.html">Servi&ccedil;os</a></li>
+              <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">Cadastro</a></li>
+              <li><a href="contatos.html">Contato</a></li>
+              <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Acesso ao Sistema</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+	  <!-- Janela Modal Acesso Sistema -->
+	  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Escolha o perfil desejado</h4>
+				</div>
+				<div class="modal-body" align="center" style="height:250px;">
+					<div class="caixa-modal">
+						<a href="entrarCliente.html">
+							<img class="img-circle" style="left:70px; position: relative;"src="img/cliente.png" alt="Acesso do Cliente" title="Acesso do Cliente" width="140" height="140">
+							<h4 class="modal-title align-text-modal">Acesso de Cliente</h4>
+						</a>
+					</div>
+					<div class="caixa-modal">
+						<a href="entrarFuncionario.html">
+							<img class="img-circle" style="left:70px; position: relative;"src="img/empregado.png" alt="IAcesso do Funcionário" title="Acesso do Funcionário" width="140" height="140">
+							<h4 class="modal-title align-text-modal">Acesso de Funcionário</h4>
+						</a>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	  </div>
+
+	  <!-- Janela modal cadastro -->
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Escolha o cadastro desejado</h4>
+				</div>
+				<div class="modal-body">
+					<img class="img-circle" style="left:70px; position: relative;"src="img/cliente.png" alt="Cadastro do Cliente" title="Cadastro do Cliente" width="140" height="140">
+					<h5 class="text-center"><strong>Cadastro para cliente</strong></h5>
+					<p class="text-center">Nesta área você poderá se cadastrar para contratar os serviços desejados.</p>
+					<a href="cadastroCliente.html"><button class="btn btn-primary" style="left:85px; position: relative;">Cadastre-se</button></a>
+					<hr class="featurette-divider">
+					<img class="img-circle" style="left:70px; position: relative;"src="img/empregado.png" alt="Cadastro de Funcionário" title="Cadastro do Funcionário" width="140" height="140">
+					<h5 class="text-center"><strong>Cadastro para funcionário</strong></h5>
+					<p class="text-center">Nesta área você poderá se cadastrar para se candidatar a alguma vaga existe.</p>
+					<a href="cadastroFuncionario.html"><button class="btn btn-primary" style="left:85px; position: relative;">Cadastre-se</button></a>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    </header>
+	<section>
+		<div class="container">
+			<ol class="breadcrumb">
+				<li><a href="index.html">Página Inicial</a></li>
+				<li class="active">Serviços</li>
+			</ol>
+		</div>
+		<div class="container"><h3 class="modal-title" id="myModalLabel">Serviços</h3><hr class="featurette-divider"></div>	
+		<div class="container" style="margin-top:20px;">
+			<h4>Doméstica</h4>
+			<img class="img-thumbnail " src="img/banner1.png" style="float:left;" alt="Doméstico" title="Doméstico" width="300" >
+			<div class="text-justify align-text-service">
+				<p>Manter a casa limpa e organizada não é uma tarefa fácil, quando se esbarra na dificuldade de encontrar profissionais dedicados e pontuais. A Fast Service garante a qualidade do serviço prestado, pois conta com uma seleta equipe de especialistas em limpeza residencial e corporativa.</p>
+				<p>Para o atendimento de manutenção, é enviado um profissional que fará toda a limpeza do ambiente com dedicação e profissionalismo, porém não entrará no mérito da limpeza interna de móveis e eletrodomésticos.</p>
+				<p>Caso o cliente necessite, por exemplo, da limpeza e organização da geladeira, a Fast Service oferece a limpeza completa, podendo nessa ocasião contratar mais de um profissional que além do asseio sistêmico do local darão atenção especial à limpeza e organização interna nos móveis e eletrodomésticos.</p>
+			</div>
+			<hr class="featurette-divider">
+			<h4>Cuidador de Idosos</h4>
+			<img class="img-thumbnail " src="img/banner3.png" style="float:left;" alt="Cuidador de Idosos" title="Cuidador de Idosos" width="300" >
+			<div class="text-justify align-text-service">
+				<p>Há muitas formas de envelhecer, mas algumas provocam mudanças que geram um excesso de trabalho ou responsabilidade para um dos membros da família, é neste momento que a família deve pensar em contratar um profissional habilitado para cuidar do idoso.</p>
+				<p>Apesar dos esforços necessários para garantir uma velhice cada vez mais ativa e saudável, muitos idosos experimentam algum grau de dependência e fragilidade nessa fase. Os cuidadores de vida da Fast Service irão auxiliar nas atividades cotidianas que o idoso não é capaz de realizar sozinho ou somente acompanha-lo em uma noite em casa ou hospital.</p>
+				<p>Todos os nossos profissionais são especializados, treinados e qualificados para atendimentos avulsos ou permanentes.</p>
+			</div>
+			<hr class="featurette-divider">
+			<h4>Passadeira</h4>
+			<img class="img-thumbnail " src="img/banner2.jpg" style="float:left;" alt="Passadeira" title="Passadeira" width="300" >
+			<div class="text-justify align-text-service">
+				<p>Nada incomoda mais do que chegar em casa após um dia exaustivo de trabalho e ter uma pilha de roupa para passar. O acumulo de roupas no pós-viagem, bem como em situações comuns do dia a dia às vezes exige reforços.</p>
+				<p>A Fast Service conta com passadeiras caprichosas irão atender em sua casa quando chamadas ou com frequência pré-definida. Aproveite os momentos para curtir sua família e amigos e deixe a roupa por nossa conta.</p>
+				<p>Por que não contratar nossos serviços e você ficar com tempo livre? Então experimente nossos serviços de Passadeira.</p>
+			</div>
+			<hr class="featurette-divider">
+			<h4>Limpador de Piscina</h4>
+			<img class="img-thumbnail " src="img/thumbnail_destaque_limpador-de-piscina.png" style="float:left;" alt="Limpador de Piscina" title="Limpador de Piscina" width="300" ><br><br><br>
+			<div class="text-justify align-text-service">
+				<p>É extremamente necessário que você se preocupe com a limpeza constante da piscina seja ela coberta ou não. O ideal é realizar manutenções semanais para evitar que a água fique totalmente suja (turva) trazendo problemas prejudiciais a sua saúde.</p>
+				<p>Os profissionais da Fast Service darão atenção especial e cuidados com a qualidade da água, limpeza de filtros, azulejos e ou fibra. Além da boa conservação do seu patrimônio, nossos serviços garantem tranquilidade e atendimento semanal com eficiência e qualidade; profissionais muito bem treinados que deixaram sua piscina sempre agradável.</p>
+
+			</div>
+			<hr class="featurette-divider" >
+			<h4>DogWalker</h4>
+			<img class="img-thumbnail " src="img/dogwalker.jpg" style="float:left;" alt="Dog Walker" title="Dog Walker" width="300" ><br><br><br>
+			<div class="text-justify align-text-service">
+				<p>Seu cão precisa se exercitar, tanto pela saúde quanto pelo gasto de energia acumulada, especialmente os cães que vivem em apartamentos e não tem espaço para correr e brincar. É fundamental que seu pet tenha essa rotina de caminhada. Para tanto a Fast Service oferece o Dog Walker. </p>
+				<p>Esse profissional é apto a oferecer a atenção especial para seu animalzinho evitando assim que ele fique estressado em um ambiente no qual ele fique preso. O profissional Dog Walker irá levar seu animal de estimação (cachorro) para passeios, promovendo a socialização. </p>
+				<p>A contratação desse serviço é diária por um período de uma hora, podendo ser estendida por duas saídas diárias. Proporcione qualidade de vida ao seu grande amigo.</p>
+			</div>
+			<hr class="featurette-divider">
+			<h4>Limpeza Pós-Obra</h4>
+			<img class="img-thumbnail " src="img/limpeza-posobra.jpg" style="float:left;" alt="Limpeza Pós-Obra" title="Limpeza Pós-Obra" width="300" ><br><br><br>
+			<div class="text-justify align-text-service">
+				<p><strong>Residencial </strong></p>
+				<p>Serviço voltado para a limpeza e reparos de construções e reformas. Ideal para deixar a casa pronta para a mudança após o fim das obras. Retiramos resíduos, manchas e toda a sujeira.</p>
+				<p><strong>Corporativo</strong></p>
+				<p>Sua empresa acabou de ser construída ou passou por uma reforma. E é claro que você não vê a hora de trabalhar. Para agilizar o processo, nada melhor que uma equipe de profissionais qualificados que deixa tudo pronto, sem demora ou inconvenientes.</p>
+			</div>
+		</div>
+	</section>
+	<div class="bar-footer"></div>
+	<div class="container-fluid footer">
+		<div class="container">
+			<footer>
+				<p class="pull-right"><a href="#">Voltar para o topo</a></p>
+				<p style="color:#FFF;">&copy; 2016 Fast Service - Todos os direitos reservados.</p>
+			</footer>
+		</div>
+	</div>
+    <!-- jQuery do Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

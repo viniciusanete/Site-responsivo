@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Fast Service - Últimos serviços solicitados
+        </title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/favicon.gif" type="image/x-icon" />
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/entrar.css" rel="stylesheet">
+        <!-- CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js">
+ 
+            </script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+                                                                                                            			                        
+            </script>
+        <![endif]-->
+        <script>
+                                                                        		                      function cancelar() {
+                                                                		                          alert('Sua solicitação de cancelamento foi enviada, você será informado quando a solicitação for concluida.');
+                                                                		                      }
+
+                                                                		                      $(function() {
+
+                                                                		                          var rating = 1.6;
+
+                                                                		                          $(".counter").text(rating);
+
+                                                                		                          $("#rateYo1").on("rateyo.init", function() {
+                                                                		                              console.log("rateyo.init");
+                                                                		                          });
+
+                                                                		                          $("#rateYo1").rateYo({
+                                                                		                              rating: rating,
+                                                                		                              numStars: 5,
+                                                                		                              precision: 2,
+                                                                		                              starWidth: "64px",
+                                                                		                              spacing: "5px",
+                                                                		                              rtl: true,
+                                                                		                              multiColor: {
+
+                                                                		                                  startColor: "#000000",
+                                                                		                                  endColor: "#ffffff"
+                                                                		                              },
+                                                                		                              onInit: function() {
+
+                                                                		                                  console.log("On Init");
+                                                                		                              },
+                                                                		                              onSet: function() {
+
+                                                                		                                  console.log("On Set");
+                                                                		                              }
+                                                                		                          }).on("rateyo.set", function() {
+                                                                		                              console.log("rateyo.set");
+                                                                		                          }).on("rateyo.change", function() {
+                                                                		                              console.log("rateyo.change");
+                                                                		                          });
+
+                                                                		                          $(".rateyo").rateYo();
+
+                                                                		                          $(".rateyo-readonly-widg").rateYo({
+
+                                                                		                              rating: rating,
+                                                                		                              numStars: 5,
+                                                                		                              precision: 2,
+                                                                		                              minValue: 1,
+                                                                		                              maxValue: 5
+                                                                		                          }).on("rateyo.change", function(e, data) {
+
+                                                                		                              console.log(data.rating);
+                                                                		                          });
+                                                                		                      });
+        </script>
+        </script>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                    </button>
+                    <a class="navbar-brand" href="painelCliente.html">Painel de controle do Cliente - Fast Service</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="painelCliente.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="solicitarOrcamento.html">Solicitar Orçamento</a>
+                        </li>
+                        <li>
+                            <a href="alterarDados.html">Alterar dados</a>
+                        </li>
+                        <li>
+                            <a href="servicosSolicitadosCliente.html">Últimos serviços solicitados</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h1 class="page-header">
+                Últimos serviços solicitados
+            </h1>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                Código
+                            </th>
+                            <th>
+                                Empregado
+                            </th>
+                            <th>
+                                Serviço
+                            </th>
+                            <th>
+                                Dia/Hora
+                            </th>
+                            <th>
+                                Valor total
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th width="200px">
+                                Ações
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                00001
+                            </td>
+                            <td>
+                                Luís Claudio
+                            </td>
+                            <td>
+                                Segurança
+                            </td>
+                            <td>
+                                11/11/2016 19:00-07:00
+                            </td>
+                            <td>
+                                R$ 220,00
+                            </td>
+                            <td>
+                                Finalizado
+                            </td>
+                            <td align="center">
+                                ------------------------------------
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                00002
+                            </td>
+                            <td>
+                                Natália Joana
+                            </td>
+                            <td>
+                                Diarista
+                            </td>
+                            <td>
+                                20/11/2016 08:00-15:00
+                            </td>
+                            <td>
+                                R$ 150,00
+                            </td>
+                            <td>
+                                Finalizado
+                            </td>
+                            <td align="center">
+                                ------------------------------------
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                00003
+                            </td>
+                            <td>
+                                João Fragoso
+                            </td>
+                            <td>
+                                Pós-Obra
+                            </td>
+                            <td>
+                                20/11/2016 00:00-07:00
+                            </td>
+                            <td>
+                                R$ 180,00
+                            </td>
+                            <td>
+                                Finalizado
+                            </td>
+                            <td align="center">
+                                ------------------------------------
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                00004
+                            </td>
+                            <td>
+                                Marcos Paulo
+                            </td>
+                            <td>
+                                Limpador de Piscina
+                            </td>
+                            <td>
+                                05/12/2016 08:00-12:00
+                            </td>
+                            <td>
+                                R$ 230,00
+                            </td>
+                            <td>
+                                Ainda à realizar
+                            </td>
+                            <td align="center">
+                                <a href="editarServico.html"><button class="btn btn-link" value="Editar"/>Editar</button></a>
+                                |
+                                <a><button onClick="cancelar()" class="btn btn-link">Cancelar</button></a>
+                            </td>
+                        </tr>
+							</tbody>
+				</table>
+            </div>
+    </body>
+    <!-- jQuery do Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+                                    	        
+    </script>
+    <script src="js/bootstrap.min.js">
+                                    	        
+    </script>
+    </body>
+
+</html>

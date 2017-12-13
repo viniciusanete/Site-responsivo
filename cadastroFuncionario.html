@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fast Service - Cadastro de Funcion&aacute;rio</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.gif" type="image/x-icon" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/justified-nav.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- JQuery Mask -->
+	<script src="js/jquery-1.5.2.min.js"></script>
+	<script src="js/jquery.maskedinput-1.3.min.js"></script>
+	<script type="text/javascript">
+		jQuery(function($){
+		  $('#cpfFuncionario').mask('999.999.999-99');
+		  $('#cepFuncionario').mask('99.999-999');
+		  $('#nascimentoFuncionario').mask('99/99/9999');
+		});
+		
+		function duplicarCampos(){
+	var clone = document.getElementById('origem').cloneNode(true);
+	var destino = document.getElementById('destino');
+	destino.appendChild (clone);
+	var camposClonados = clone.getElementsByTagName('input');
+	for(i=0; i<camposClonados.length;i++){
+		camposClonados[i].value = '';
+		}
+	}
+		function removerCampos(id){
+			var node1 = document.getElementById('destino');
+			node1.removeChild(node1.childNodes[0]);
+		}
+		
+		
+	</script>
+  </head>
+  <body>
+    <header>
+  <a name="#topo"/>
+      <div class="bar"></div>
+      <div class="logo" align="center">
+        <a href="index.html"><img src="img/logo.png" alt="Logo da empresa Fast Service" title="Logo da empresa Fast Service" width="250px"  class="img-responsive" alt="LogoMarca da empresa Fast Service"/></a>
+      </div>
+      <div class="bar"></div>
+      <div class="container align-top">
+        <div class="masthead">
+          <nav>
+            <ul class="nav nav-justified">
+              <li><a href="index.html">P&aacute;gina Inicial</a></li>
+              <li><a href="quemSomos.html">Quem somos</a></li>
+              <li><a href="servicos.html">Servi&ccedil;os</a></li>
+              <li class="active"><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">Cadastro</a></li>
+              <li><a href="contatos.html">Contato</a></li>
+              <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Acesso ao Sistema</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    <!-- Janela Modal Acesso Sistema -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Escolha o perfil desejado</h4>
+        </div>
+        <div class="modal-body" align="center" style="height:250px;">
+          <div class="caixa-modal">
+            <a href="entrarCliente.html">
+              <img class="img-circle" style="left:70px; position: relative;"src="img/cliente.png" alt="Acesso do Cliente" title="Acesso do Cliente" width="140" height="140">
+              <h4 class="modal-title align-text-modal">Acesso de Cliente</h4>
+            </a>
+          </div>
+          <div class="caixa-modal">
+            <a href="entrarFuncionario.html">
+              <img class="img-circle" style="left:70px; position: relative;"src="img/empregado.png" alt="IAcesso do Funcionário" title="Acesso do Funcionário" width="140" height="140">
+              <h4 class="modal-title align-text-modal">Acesso de Funcionário</h4>
+            </a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Janela modal cadastro -->
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Escolha o cadastro desejado</h4>
+        </div>
+        <div class="modal-body">
+          <img class="img-circle" style="left:70px; position: relative;"src="img/cliente.png" alt="Cadastro do Cliente" title="Cadastro do Cliente" width="140" height="140">
+          <h5 class="text-center"><strong>Cadastro para cliente</strong></h5>
+          <p class="text-center">Nesta área você poderá se cadastrar para contratar os serviços desejados.</p>
+          <a href="cadastroCliente.html"><button class="btn btn-primary" style="left:85px; position: relative;">Cadastre-se</button></a>
+          <hr class="featurette-divider">
+          <img class="img-circle" style="left:70px; position: relative;"src="img/empregado.png" alt="Cadastro de Funcionário" title="Cadastro do Funcionário" width="140" height="140">
+          <h5 class="text-center"><strong>Cadastro para funcionário</strong></h5>
+          <p class="text-center">Nesta área você poderá se cadastrar para se candidatar a alguma vaga existe.</p>
+          <a href="cadastroFuncionario.html"><button class="btn btn-primary" style="left:85px; position: relative;">Cadastre-se</button></a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </header>
+    <section>
+    <div class="container">
+	<ol class="breadcrumb">
+		<li><a href="index.html">Página Inicial</a></li>
+		<li class="active">Cadastro de Funcion&aacute;rio</li>
+	</ol>
+      <form id="cadastroCliente" method="post" action="#">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+            <div class="form-group">
+              <label for="nomeCliente">Nome completo</label>
+              <input type="text" class="form-control" id="nomeEmpregado" placeholder="Nome completo" autofocus required>
+            </div>
+            <div class="form-group">
+              <label for="sexoCliente">Sexo</label>
+              <select class="form-control" id="sexoCliente">
+                <option>Selecione uma opção</option>
+                <option value="F">Feminino</option>
+                <option value="M">Masculino</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="emailCliente">E-mail</label>
+              <input type="text" class="form-control" id="emailCliente" placeholder="E-mail" required>
+            </div>
+            <div class="form-group">
+              <label for="nascimentoCliente">Nascimento</label>
+              <input type="date" class="form-control" id="nascimentoFuncionario" placeholder="Nascimento" required>
+            </div>
+            <div class="form-group">
+              <label for="cpfCliente">CPF</label>
+              <input type="text" class="form-control" id="cpfFuncionario" placeholder="000.000.000-00" required>
+            </div>
+            <div class="form-group">
+              <label for="rgCliente">RG</label>
+              <input type="text" class="form-control" id="rgCliente" placeholder="RG" required>
+            </div>
+            <div class="form-group">
+              <label for="orgaoCliente">Orgão</label>
+              <input type="text" class="form-control" id="orgaoCliente" placeholder="Orgão" required>
+            </div>
+			<div class="form-group">
+				<label for="carteiraEmpregado">Carteira de trabalho</label>
+				<input type="text" class="form-control" id="carteiraEmpregado" placeholder="Carteira de trabalho" required>
+			</div>
+        </fieldset>
+        <fieldset id="Endereco">
+          <legend>Endereço</legend>
+          <div class="form-group">
+            <label for="cepCliente">CEP</label>
+            <input type="text" class="form-control" id="cepFuncionario" placeholder="00.000-000" required>
+          </div>
+          <div class="form-group">
+            <label for="logradouroCliente">Logradouro</label>
+            <input type="text" class="form-control" id="logradouroCliente" placeholder="Logradouro" required>
+          </div>
+          <div class="form-group">
+            <label for="numeroCliente">Número</label>
+            <input type="text" class="form-control" id="numeroCliente" placeholder="Número" required>
+            <p class="help-block">Caso, não possua número preencher como "S/N".</p>
+          </div>
+          <div class="form-group">
+            <label for="complementoCliente">Complemento</label>
+            <input type="text" class="form-control" id="complementoCliente" placeholder="Complemento">
+          </div>
+          <div class="form-group">
+            <label for="estadoCliente">Estado</label>
+              <select name="estadoCliente" class="form-control"> 
+                <option>Selecione o Estado</option> 
+                <option value="ac">Acre</option> 
+                <option value="al">Alagoas</option> 
+                <option value="am">Amazonas</option> 
+                <option value="ap">Amapá</option> 
+                <option value="ba">Bahia</option> 
+                <option value="ce">Ceará</option> 
+                <option value="df">Distrito Federal</option> 
+                <option value="es">Espírito Santo</option> 
+                <option value="go">Goiás</option> 
+                <option value="ma">Maranhão</option> 
+                <option value="mt">Mato Grosso</option> 
+                <option value="ms">Mato Grosso do Sul</option> 
+                <option value="mg">Minas Gerais</option> 
+                <option value="pa">Pará</option> 
+                <option value="pb">Paraíba</option> 
+                <option value="pr">Paraná</option> 
+                <option value="pe">Pernambuco</option> 
+                <option value="pi">Piauí</option> 
+                <option value="rj">Rio de Janeiro</option> 
+                <option value="rn">Rio Grande do Norte</option> 
+                <option value="ro">Rondônia</option> 
+                <option value="rs">Rio Grande do Sul</option> 
+                <option value="rr">Roraima</option> 
+                <option value="sc">Santa Catarina</option> 
+                <option value="se">Sergipe</option> 
+                <option value="sp">São Paulo</option> 
+                <option value="to">Tocantins</option> 
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cidadeCliente">Cidade</label>
+              <input type="text" class="form-control" id="cidadeCliente" placeholder="Cidade" required>
+            </div>
+            <div class="form-group">
+              <label for="bairroCliente">Bairro</label>
+              <input type="text" class="form-control" id="bairroCliente" placeholder="Bairro" required> 
+            </div>
+        </fieldset>
+		<fieldset id="experiencias">
+			<legend>Currículo</legend>
+			<div class="form-group">
+				<label for="curr">Arquivo</label>
+				<input type="file" name="curr" id="curr">
+			</div>
+		</fieldset>
+        <fieldset id="sistema">
+          <legend>Informações</legend>
+          <div class="form-group">
+				<p class="text-justify">Todas as informações preenchidas serão enviadas para nossos funcionários, em um prazo máximo de 3 dias úteis, os selecionados receberão um e-mail recebendo seu login e senha provisória para acesso ao sistema. Os demais, que não receberem o e-mail, estaremos armazenando seu currículo em nosso banco de dados para futuras chances. Boa sorte a todos!</p>
+			</div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> Declaro que li e concordo com os <a data-toggle="modal" data-target="#myModal">termos de política</a> da empresa Fast Service.
+      </label>
+    </div>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Termos de política e privacidade da empresa</h4>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-primary">Desejo aceitar</button>
+				</div>
+				<div class="modal-body">
+					<h5><strong>SEÇÃO 1 - O QUE FAZEMOS COM A SUA INFORMAÇÃO?</h5></strong>
+						<p>Quando você compra algo da nossa loja, como parte do processo de compra e venda, coletamos as informações pessoais que você nos dá tais como seu nome, endereço e endereço de e-mail.</p>
+						<p>Quando você navega pela nossa loja, recebemos também automaticamente o protocolo de internet do seu computador, endereço de IP, a fim de obter informações que nos ajudam a aprender dobre seu navegador e sistema operacional.</p>
+						<p>Marketing por e-mail (se aplicável): Com sua permissão, podemos lhe enviar e-mails sobre nossa loja, novos produtos e outras atualizações.</p>
+					<h5><strong>SEÇÃO 2 - CONSENTIMENTO</h5></strong>
+					<h6><strong>Como vocês obtêm meu consentimento?</h6></strong>
+						<p>Quando você nos fornece as suas informações pessoais para completar uma transação, verificar seu cartão de crédito, fazer um pedido, providenciar uma entrega ou retornar uma compra, entendemos que você concorda com a nossa coleta e uso delas para aquele motivo específico apenas.</p>
+						<p>Se pedimos por suas informações pessoais por uma razão secundária, como marketing, vamos lhe pedir diretamente por seu consentimento, ou lhe fornecer a oportunidade de dizer não.</p>
+					<h6><strong>Como eu retiro o meu consentimento?</h6></strong>
+					<p>Se após você nos fornecer seus dados, você mudar de ideia, você pode retirar o seu consentimento para que possamos entrar em contato, para a coleção de dados contínua, uso ou divulgação de suas informações, a qualquer momento, entrando em contato conosco em contato@fastservice.com ou nos enviando uma correspondência em: Fast Service Avenida das Américas 1024, Rio de Janeiro, RJ, 25.235-589, Brazil</p>
+					<h5><strong>SEÇÃO 3 - DIVULGAÇÃO</h5></strong>
+						<p>Podemos divulgar suas informações pessoais se formos obrigados pela lei para fazê-lo ou se você violar nossos Termos de Serviço.</p>
+						<p>Pagamento:</p>
+						<p>Se você escolher um gateway de pagamento direto para completar a sua compra, então o Shopify armazena seus dados de cartão de crédito. Ele é criptografado através do Padrão de Segurança de Dados para a Indústria de Pagamento com Cartão (PCI-DSS). Seus dados de transação de compra são armazenados apenas o tanto quanto forem necessários para completar sua transação de compra. Depois de completado, suas informações de transação de compra são apagadas.</p>
+						<p>Todos os gateways de pagamento direto aderem aos padrões definidos pela PCI-DSS como gerenciado pelo Conselho de Normas de Segurança PCI, que é um esforço conjunto de marcas como Visa, MasterCard, American Express e Discover.</p>
+						<p>Os requisitos da PCI-DSS ajudam a garantir o manuseio seguro de informações de cartão de crédito pela nossa loja e seus fornecedores de serviço.</p>
+					<h5><strong>SEÇÃO 5 - SERVIÇOS DE TERCEIROS</h5></strong>
+						<p>No geral, os fornecedores terceirizados usados por nós irão apenas coletar, usar e divulgar suas informações na medida do necessário para permitir que eles realizem os serviços que eles nos fornecem.</p>
+						<p>Entretanto, certos fornecedores de serviços terceirizados, tais como gateways de pagamento e outros processadores de transação de pagamento, têm suas próprias políticas de privacidade com respeito à informação que somos obrigados a fornecer para eles de suas transações relacionadas com compras.</p>
+						<p>Para esses fornecedores, recomendamos que você leia suas políticas de privacidade para que você possa entender a maneira na qual suas informações pessoais serão usadas por esses fornecedores.</p>
+						<p>Em particular, lembre-se que certos fornecedores podem ser localizados em ou possuir instalações que são localizadas em jurisdições diferentes que você ou nós. Assim, se você quer continuar com uma transação que envolve os serviços de um fornecedor de serviço terceirizado, então suas informações podem tornar-se sujeitas às leis da(s) jurisdição(ões) nas quais o fornecedor de serviço ou suas instalações estão localizados.</p>
+						<p>Como um exemplo, se você está localizado no Canadá e sua transação é processada por um gateway de pagamento localizado nos Estados Unidos, então suas informações pessoais usadas para completar aquela transação podem estar sujeitas a divulgação sob a legislação dos Estados Unidos, incluindo o Ato Patriota.</p>
+						<p>Uma vez que você deixe o site da nossa loja ou seja redirecionado para um aplicativo ou site de terceiros, você não será mais regido por essa Política de Privacidade ou pelos Termos de Serviço do nosso site.</p>
+					<h6><strong>Links</h6></strong>
+						<p>Quando você clica em links na nossa loja, eles podem lhe direcionar para fora do nosso site. Não somos responsáveis pelas práticas de privacidade de outros sites e lhe incentivamos a ler as declarações de privacidade deles.</p>
+					<h5><strong>SEÇÃO 6 - SEGURANÇA</h5></strong>
+						<p>Para proteger suas informações pessoais, tomamos precauções razoáveis e seguimos as melhores práticas da indústria para nos certificar que elas não serão perdidas inadequadamente, usurpadas, acessadas, divulgadas, alteradas ou destruídas.</p>	
+						<p>Se você nos fornecer as suas informações de cartão de crédito, essa informação é criptografada usando tecnologia "secure socket layer" (SSL) e armazenada com uma criptografia AES-256. Embora nenhum método de transmissão pela Internet ou armazenamento eletrônico é 100% seguro, nós seguimos todos os requisitos da PCI-DSS e implementamos padrões adicionais geralmente aceitos pela indústria.</p>
+					<h5><strong>SEÇÃO 7 - IDADE DE CONSENTIMENTO</h5></strong>
+						<p>Ao usar esse site, você afirma que você tem pelo menos a maioridade em seu estado ou província de residência, ou que você tem a maioridade em seu estado ou província de residência e você nos deu seu consentimento para permitir que qualquer um dos seus dependentes menores de idade usem esse site.</p>
+					<h5><strong>SEÇÃO 8 - ALTERAÇÕES PARA ESSA POLÍTICA DE PRIVACIDADE</h5></strong>
+						<p>Reservamos o direito de modificar essa política de privacidade a qualquer momento, então por favor, revise-a com frequência. Alterações e esclarecimentos vão surtir efeito imediatamente após sua publicação no site. Se fizermos alterações de materiais para essa política, iremos notificá-lo aqui que eles foram atualizados, para que você tenha ciência sobre quais informações coletamos, como as usamos, e sob que circunstâncias, se alguma, usamos e/ou divulgamos elas.</p>
+						<p>Se nossa loja for adquirida ou fundida com outra empresa, suas informações podem ser transferidas para os novos proprietários para que possamos continuar a vender produtos para você.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Desejo aceitar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+        </fieldset>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="reset" class="btn btn-warning">Limpar</button>
+  </form>
+  </div>
+    </section>
+	<div class="bar-footer"></div>
+	<div class="container-fluid footer">
+		<div class="container">
+			<footer>
+				<p class="pull-right"><a href="#">Voltar para o topo</a></p>
+				<p style="color:#FFF;">&copy; 2016 Fast Service - Todos os direitos reservados. &middot;</p>
+			</footer>
+		</div>
+	</div>
+    <!-- jQuery do Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

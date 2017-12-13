@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Fast Service - Cadastrar Foto
+        </title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/favicon.gif" type="image/x-icon" />
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/entrar.css" rel="stylesheet">
+        <!-- CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js">
+ 
+            </script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+                                                                                                            			                        
+            </script>
+        <![endif]-->
+		<script type="text/javascript">
+			function feito(){
+				alert('Foto cadastrada com sucesso');
+			}
+			
+		</script>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                    </button>
+                    <a class="navbar-brand" href="painelFuncionario.html">Painel de controle do Funcionário - Fast Service</a>
+                </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="painelFuncionario.html">Início</a></li>
+			<li><a href="cadastrarFoto.html">Cadastrar Foto</a></li>
+            <li><a href="alterarDadoFuncionario.html">Alterar dados</a></li>
+            <li><a href="servicosRealizados.html">Últimos serviços realizados</a></li>
+            <li><a href="index.html">Sair</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+        <div class="container">
+            <h1 class="page-header">
+               Cadastrar Foto
+            </h1>
+            <form method="post" action="#">
+				<fieldset>
+					<legend>Foto</legend>
+					<div class="form-group">
+						<label for="Arquivo">
+							Arquivo
+						</label>
+						<input type="file" name="Arquivo" id="Arquivo">
+					</div>
+					<button type="submit" onClick="feito()" class="btn btn-primary">Cadastrar</button> <a href="painelFuncionario.html"><button type="button" class="btn btn-warning">Voltar</button></a>
+				</fieldset>
+			</form>
+            </div>
+    </body>
+    <!-- jQuery do Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+                                    	        
+    </script>
+    <script src="js/bootstrap.min.js">
+                                    	        
+    </script>
+    </body>
+
+</html>

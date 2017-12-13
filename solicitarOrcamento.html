@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Fast Service - Solicitar Orçamento
+        </title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/favicon.gif" type="image/x-icon" />
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/entrar.css" rel="stylesheet">
+        <!-- CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="orcamento.js">                                                                               
+        </script>
+		<script src="js/jquery-1.5.2.min.js"></script>
+		<script src="js/jquery.maskedinput-1.3.min.js"></script>
+		<script type="text/javascript">
+																							jQuery(function($)
+																						{
+																							  $('#contatoUm').mask('(99)9999-9999');
+																							  $('#contatoDois').mask('(99)99999-9999');
+																						});
+		</script>
+        <script>
+                                                                                              function exibe_areas(el)
+                                                                                      {
+                                                                                          var objDomestica = document.getElementById("domestica");
+                                                                                          var objCuidador = document.getElementById("cuidador");
+                                                                                          var objPassadeira = document.getElementById("passadeira");
+                                                                                          var objLimpador = document.getElementById("limp_piscina");
+                                                                                          var objDogWalker = document.getElementById("dog_walker");
+                                                                                          var objPObra = document.getElementById("p_obra");
+
+                                                                                          var numCheckboxes = document.form1.elements['opcao'];
+                                                                                          var ShowDiv = document.getElementById("divShow_" + el);
+                                                                                          var idCheckbox = "document.form1.opcao[" + el + "]";
+                                                                                          idCheckbox = eval(idCheckbox);
+
+                                                                                          //Apagando todos os divs que possam estar abertos:
+                                                                                          for (var i = 0; i < numCheckboxes.length; i++)
+                                                                                          {
+                                                                                              var objDiv = document.getElementById("divShow_" + i);
+                                                                                              if (idCheckbox.checked == true)
+                                                                                              {
+                                                                                                  ShowDiv.style.display = "block";
+                                                                                              }
+                                                                                              else if (idCheckbox.checked == false)
+                                                                                              {
+                                                                                                  ShowDiv.style.display = "none";
+                                                                                              }
+
+                                                                                          }
+
+                                                                                          //alert(idCheckbox.value);
+                                                                                          if (idCheckbox.checked == true)
+                                                                                          {
+                                                                                              ShowDiv.style.display = "block";
+                                                                                          }
+
+                                                                                      }
+																							
+																							function enviar()
+																							{
+																								alert('Orçamento solicitado com sucesso! Aguarde a confirmação da empresa!');
+																							}
+        </script>
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js">
+                                                                                                                                            
+            </script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+                                                                                                                                            
+            </script>
+        <![endif]-->
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">
+                            Toggle navigation
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                    </button>
+                    <a class="navbar-brand" href="painelCliente.html">Painel de controle do Cliente - Fast Service</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="painelCliente.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="solicitarOrcamento.html">Solicitar Orçamento</a>
+                        </li>
+                        <li>
+                            <a href="alterarDados.html">Alterar dados</a>
+                        </li>
+                        <li>
+                            <a href="servicosSolicitadosCliente.html">Últimos serviços solicitados</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h1 class="page-header">
+                Solicitar orçamento
+            </h1>
+            <form name="form1" method="post" action="#">
+                <fieldset>
+                    <legend>
+                        Escolha dos serviços
+                    </legend>
+                    <div class="form-group">
+                        <label for="#">
+                            Escolha os serviços desejados
+                        </label>
+                        <br>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="opcao" id="domestica" value="1" onclick="exibe_areas(0);">
+                            Doméstica
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="opcao" id="cuidador" value="2" onclick="exibe_areas(1);">
+                            Cuidador de Idosos
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="opcao" id="passadeira" value="3" onclick="exibe_areas(2);">
+                            Passadeira
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="opcao" id="limp_piscina" value="4" onclick="exibe_areas(3);">
+                            Limpador de Piscina
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="opcao" id="dog_walker" value="5" onclick="exibe_areas(4);">
+                            Dog Walker
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="opcao" id="p_obra" value="6" onclick="exibe_areas(5);">
+                            Pós-Obra
+                        </label>
+                    </div>
+                </fieldset>
+                <div id="divShow_0" style="display:none;">
+                    <fieldset>
+                        <legend>
+                            Serviço de Doméstica
+                        </legend>
+                        <div class="form-group">
+                            <label for="nPessoasD">
+                                Quantas pessoas serão necessárias?
+                            </label>
+                            <input type="number" class="form-control" min="0" max="5" onblur="calcularDomestica()"
+                            name="nPessoasD" id="nPessoasD">
+                        </div>
+                        <div class="form-group">
+                            <label for="dataD">
+                                Dia disponível para o serviço
+                            </label>
+                            <select name="diaDomestica" id="diaDomestica" class="form-control">
+                                <option>
+                                    Selecione uma opção
+                                </option>
+                                <option value="03/12/S">
+                                    03 de Dezembro - Sábado
+                                </option>
+                                <option value="04/12/D">
+                                    04 de Dezembro - Domingo
+                                </option>
+                                <option value="06/12/T">
+                                    06 de Dezembro - Terça
+                                </option>
+                                <option value="14/12/Q">
+                                    14 de Dezembro - Quarta
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="horaD">
+                                Horário disponível para o serviço
+                            </label>
+                            <select name="horaDomestica1" id="horaDomestica1" class="form-control"
+                            style="display: none;">
+                                <option>
+                                    Selecione uma opção
+                                </option>
+                                <option value="14-16">
+                                    14:00 até 16:00
+                                </option>
+                                <option value="16-18">
+                                    16:00 até 18:00
+                                </option>
+                            </select>
+                            <select name="horaDomestica2" id="horaDomestica2" class="form-control"
+                            style="display: none;">
+                                <option>
+                                    Selecione uma opção
+                                </option>
+                                <option value="9-11">
+                                    09:00-11:00
+                                </option>
+                            </select>
+                            <select name="horaDomestica3" id="horaDomestica3" class="form-control"
+                            style="display: none;">
+                                <option>
+                                    Selecione uma opção
+                                </option>
+                                <option value="8-10">
+                                    08:00-10:00
+                                </option>
+                                <option value="12-14">
+                                    12:00-14:00
+                                </option>
+                            </select>
+                            <select name="horaDomestica4" id="horaDomestica4" class="form-control"
+                            style="display: none;">
+                                <option>
+                                    Selecione uma opção
+                                </option>
+                                <option value="15-18">
+                                    15:00-18:00
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="valorDomestica">
+                                Sub-total
+                            </label>
+                            <input id="resultDomestica" class="form-control" type="text" disabled="1"
+                            />
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="divShow_1" style="display:none;">
+                    <fieldset>
+                        <legend>
+                            Cuidador de Idosos
+                        </legend>
+                        <div class="form-group">
+                            <label for="nPessoasC">
+                                Número de cuidadores
+                            </label>
+                            <input type="number" class="form-control" onblur="calcularCuidador()"
+                            min="0" max="3" name="nPessoasC" id="nPessoasC">
+                        </div>
+                        <div class="form-group">
+                            <label for="plantao">
+                                Selecione o plantão desejado
+                            </label>
+                            <select name="plantao" id="plantao" onblur="calcularCuidador()" class="form-control">
+                                <option>
+                                    Selecione uma opção
+                                </option>
+                                <option value="20">
+                                    12 horas por 12 horas
+                                </option>
+                                <option value="40">
+                                    24 horas por 24 horas
+                                </option>
+                                <option value="80">
+                                    48 horas por 48 horas
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="meses">
+                                Período do serviço (em meses)
+                            </label>
+                            <input type="number" name="meses" id="meses" onfocus="calcularDomestica()"
+                            class="form-control" min="0" max="12">
+                        </div>
+                        <div class="form-group">
+                            <label for="valorCuidador">
+                                Sub-total
+                            </label>
+                            <input id="resultCuidador" class="form-control" type="text" disabled="1"
+                            />
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="divShow_2" style="display:none;">
+                    <fieldset>
+                        <legend>
+                            Passadeira
+                        </legend>
+                        <div class="form-group">
+                            <label for="dia">
+                                Dia de serviço
+                            </label>
+                            <select name="diaServico" class="form-control">
+                                <option>
+                                    Selecione uma opção
+                                </option>
+                                <option>
+                                    30 de Novembro - Quarta
+                                </option>
+                                <option>
+                                    1 de Dezembro - Quinta
+                                </option>
+                                <option>
+                                    2 de Dezembro - Sexta
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="horas">
+                                Horas de serviço (Máximo de 5 horas)
+                            </label>
+                            <input type="number" name="horasPassadeira" onblur="calcularPassadeira()"
+                            id="horasPassadeira" class="form-control" min="0" max="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="valorPassadeira">
+                                Sub-total
+                            </label>
+                            <input id="resultPassadeira" name="resultPassadeira" class="form-control"
+                            type="text" disabled="1" />
+                    </fieldset>
+                    </div>
+                    <div id="divShow_3" style="display: none;">
+                        <fieldset>
+                            <legend>
+                                Limpador de Piscinas
+                            </legend>
+                            <div class="form-group">
+                                <label for="qPiscinas">
+                                    Quantidade de piscinas
+                                </label>
+                                <input type="number" min="0" max="5" name="qPiscinas" id="qPiscinas" class="form-control"
+                                onblur="calcularPiscina()">
+                            </div>
+                            <div class="form-group">
+                                <label for="diaServico">
+                                    Dias disponíveis (O serviço será realizado na parte da manhã)
+                                </label>
+                                <select name="diaServico" class="form-control">
+                                    <option>
+                                        Selecione uma opção
+                                    </option>
+                                    <option>
+                                        30 de Novembro - Quarta
+                                    </option>
+                                    <option>
+                                        1 de Dezembro - Quinta
+                                    </option>
+                                    <option>
+                                        2 de Dezembro - Sexta
+                                    </option>
+                                </select>
+                            </div>
+                            <input id="resultPiscina" name="resultPiscina" class="form-control" type="text"
+                            disabled="1" />
+                        </fieldset>
+                    </div>
+                    <div id="divShow_4" style="display:none;">
+                        <fieldset>
+                            <legend>
+                                Dog Walker
+                            </legend>
+                            <div class="form-group">
+                                <label for="nDogs">
+                                    Quantidade de animais
+                                </label>
+                                <input type="number" name="nDogs" id="nDogs" min="0" max="5" class="form-control"
+                                onblur="calcularDogWalker()">
+                            </div>
+                            <div class="form-group">
+                                <label for="hDogs">
+                                    Quantidade de horas
+                                </label>
+                                <input type="number" name="hDogs" id="hDogs" min="0" max="5" class="form-control"
+                                onblur="calcularDogWalker()">
+                            </div>
+                            <label for="valorDog">
+                                Sub-total
+                            </label>
+                            <input id="resultDog" name="resultDog" class="form-control" type="text"
+                            disabled="1" />
+                        </fieldset>
+                    </div>
+                    <div id="divShow_5" style="display:none;">
+                        <fieldset>
+                            <legend>
+                                Pós-Obra
+                            </legend>
+                            <div class="form-group">
+                                <label for="casaPredio">
+                                    Tipo de Serviço
+                                </label>
+                                <select name="casaPredio" id="casaPredio" onblur="calcularPosObra()" class="form-control">
+                                    <option>
+                                        Selecione uma opção
+                                    </option>
+                                    <option value="1">
+                                        Casa
+                                    </option>
+                                    <option value="2">
+                                        Prédio
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="totalPessoas">
+                                    Funcionários necessários
+                                </label>
+                                <input type="number" class="form-control" name="totalPessoas" id="totalPessoas"
+                                onblur="calcularPosObra()">
+                            </div>
+                            <div class="form-group">
+                                <label for="totalPosObra">
+                                    Sub-total
+                                </label>
+                                <input type="text" name="totalPosObra" id="totalPosObra" class="form-control"
+                                disabled="1">
+                            </div>
+                        </fieldset>
+                    </div>
+                    <fieldset>
+                        <legend>
+                            Valor
+                        </legend>
+                        <div class="form-group">
+                            <label>
+                                Valor total
+                            </label>
+                            <input type="text" class="form-control" id="totalPreco" readonly="1" onfocus="saberTotal()">
+                        </div>
+                    </fieldset>
+					<fieldset>
+						<legend>Endereço do Serviço</legend>
+						<div class="form-group">
+							<label for="enderecoServico">
+								Endereço
+							</label>
+							<input type="text" name="enderecoServico" id="enderecoServico" class="form-control" required="1">
+						</div>
+						<div class="form-group">
+							<label for="numeroServico">
+								Número
+							</label>
+							<input type="text" name="numeroServico" id="numeroServico" class="form-control" required="1">
+							<p class="help-block">Caso, não possua número preencher como "S/N".</p>
+						</div>
+						<div class="form-group">
+							<label for="complementoServico">
+								Complemento
+							</label>
+							<input type="text" name="complementoServico" id="complementoServico" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="estadoCliente">
+								Estado
+							</label>
+							<select name="estadoCliente" class="form-control"> 
+								<option>Selecione o Estado</option> 
+									<option value="ac">Acre</option> 
+									<option value="al">Alagoas</option> 
+									<option value="am">Amazonas</option> 
+									<option value="ap">Amapá</option> 
+									<option value="ba">Bahia</option> 
+									<option value="ce">Ceará</option> 
+									<option value="df">Distrito Federal</option> 
+									<option value="es">Espírito Santo</option> 
+									<option value="go">Goiás</option> 
+									<option value="ma">Maranhão</option> 
+									<option value="mt">Mato Grosso</option> 
+									<option value="ms">Mato Grosso do Sul</option> 
+									<option value="mg">Minas Gerais</option> 
+									<option value="pa">Pará</option> 
+									<option value="pb">Paraíba</option> 
+									<option value="pr">Paraná</option> 
+									<option value="pe">Pernambuco</option> 
+									<option value="pi">Piauí</option> 
+									<option value="rj">Rio de Janeiro</option> 
+									<option value="rn">Rio Grande do Norte</option> 
+									<option value="ro">Rondônia</option> 
+									<option value="rs">Rio Grande do Sul</option> 
+									<option value="rr">Roraima</option> 
+									<option value="sc">Santa Catarina</option> 
+									<option value="se">Sergipe</option> 
+									<option value="sp">São Paulo</option> 
+									<option value="to">Tocantins</option> 
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="cidadeCliente">
+								Cidade
+							</label>
+							<input type="text" class="form-control" id="cidadeCliente" required>
+						</div>
+						<div class="form-group">
+							<label for="bairroCliente">
+								Bairro
+							</label>
+							<input type="text" class="form-control" id="bairroCliente"  required> 
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Contato</legend>
+						<div class="form-group">
+							<label for="contatoUm">
+								Contato 1
+							</label>
+							<input type="text" name="contatoUm" id="contatoUm" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="contatoDois">
+								Contato 2
+							</label>
+							<input type="text" name="contatoDois" id="contatoDois" class="form-control">
+						</div>
+					</fieldset>
+                    <button type="button" class="btn btn-primary" onClick="enviar()">
+                        Contratar
+                    </button>
+                    <button type="reset" class="btn btn-warning">
+                        Limpar
+                    </button>
+				</div>
+			</form>
+        </div>
+    </body>
+    <!-- jQuery do Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+                                              
+    </script>
+    <script src="js/bootstrap.min.js">
+                                              
+    </script>
+    </body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fast Service - Serviços</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.gif" type="image/x-icon" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS --> <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/justified-nav.css" rel="stylesheet">
+
+
+	<script type="text/javascript">
+function enviardados()
+		{
+			
+				alert('Enviado com sucesso');
+			}
+
+	</script>
+	<style>
+		#balao {
+			width: 370px;
+			height: 110px;
+			padding: 5px;
+		}
+		#balao p {
+			margin: 0;
+			text-align: left;
+			float: left;
+		}
+		#balao img {
+			display: block;
+			float: left;
+			padding-right: 10px;
+		}
+		.gmap3 {
+			margin: 20px auto;
+			border: 1px dashed #C0C0C0;
+			width: 700px;
+			height: 430px;
+		}
+	</style>
+</head>
+<body>
+    <header>
+	<a name="#topo"/>
+      <div class="bar"></div>
+      <div class="logo" align="center">
+        <a href="index.html"><img src="img/logo.png" alt="Logo da empresa Fast Service" width="250px"  class="img-responsive" alt="LogoMarca da empresa Fast Service"/></a>
+      </div>
+      <div class="bar"></div>
+      <div class="container align-top">
+        <div class="masthead">
+          <nav>
+            <ul class="nav nav-justified">
+              <li><a href="index.html">P&aacute;gina Inicial</a></li>
+              <li><a href="quemSomos.html">Quem somos</a></li>
+              <li ctive"><a href="servicos.html">Servi&ccedil;os</a></li>
+              <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">Cadastro</a></li>
+              <li class="active"><a href="contatos.html">Contato</a></li>
+              <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Acesso ao Sistema</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+	  <!-- Janela Modal Acesso Sistema -->
+	  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Escolha o perfil desejado</h4>
+				</div>
+				<div class="modal-body" align="center" style="height:250px;">
+					<div class="caixa-modal">
+						<a href="entrarCliente.html">
+							<img class="img-circle" style="left:70px; position: relative;"src="img/cliente.png" alt="Imagem referente a Serviços da Empresa" width="140" height="140">
+							<h4 class="modal-title align-text-modal">Acesso de Cliente</h4>
+						</a>
+					</div>
+					<div class="caixa-modal">
+						<a href="entrarFuncionario.html">
+							<img class="img-circle" style="left:70px; position: relative;"src="img/empregado.png" alt="Imagem referente a Serviços da Empresa" width="140" height="140">
+							<h4 class="modal-title align-text-modal">Acesso de Funcionário</h4>
+						</a>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	  </div>
+
+	  <!-- Janela modal cadastro -->
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Escolha o cadastro desejado</h4>
+				</div>
+				<div class="modal-body">
+					<img class="img-circle" style="left:70px; position: relative;"src="img/cliente.png" alt="Imagem referente a Serviços da Empresa" width="140" height="140">
+					<h5 class="text-center"><strong>Cadastro para cliente</strong></h5>
+					<p class="text-center">Nesta área você poderá se cadastrar para contratar os serviços desejados.</p>
+					<a href="cadastroCliente.html"><button class="btn btn-primary" style="left:85px; position: relative;">Cadastre-se</button></a>
+					<hr class="featurette-divider">
+					<img class="img-circle" style="left:70px; position: relative;"src="img/empregado.png" alt="Imagem referente a Serviços da Empresa" width="140" height="140">
+					<h5 class="text-center"><strong>Cadastro para funcionário</strong></h5>
+					<p class="text-center">Nesta área você poderá se cadastrar para se candidatar a alguma vaga existe.</p>
+					<a href="cadastroFuncionario.html"><button class="btn btn-primary" style="left:85px; position: relative;">Cadastre-se</button></a>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    </header>
+	<section>
+		<div class="container">
+			<ol class="breadcrumb">
+				<li><a href="index.html">Página Inicial</a></li>
+				<li class="active">Contatos</li>
+			</ol>
+		</div>
+		<div class="container">
+			<h3 class="modal-title" id="myModalLabel">Telefone e Mapa</h3><hr class="featurette-divider">
+			<div id="mapa" class="gmap3"><script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:700px;'><div id='gmap_canvas' style='height:440px;width:700px;'></div><div><small><a href="http://embedgooglemaps.com">embed google map</a></small></div><div><small><a href="https://billigleiebil.world/">3  Bare de beste bilutleiere</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(-23.0003152,-43.35737670000003),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-23.0003152,-43.35737670000003)});infowindow = new google.maps.InfoWindow({content:'<strong>Fast Servce - Rio de Janeiro, Tel: (21)3656-3948</strong><br>Avenida das Américas 124<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script></div>
+		</div>
+		<div class="container"><h3 class="modal-title" id="myModalLabel">Contato</h3><hr class="featurette-divider"></div>	
+		<div class="container">
+			<p>Se você deseja falar com algum de nossos funcionários da empresa sobre algo, preencha o formulário abaixo e responderemos o mais rápido possivel!</p>	
+			<form method="post" id="msg" action="#" onSubmit="return enviardados();">
+				<fieldset>
+					<legend>Dados Pessoais</legend>
+					<div class="form-group">
+						<label for="nome">Nome completo</label>
+						<input type="text" name="nome" id="nome" placeholder="Nome completo" required="1" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="email">E-mail</label>
+						<input type="email" name="email" id="email" placeholder="E-mail" required="1" class="form-control"> 
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Dados da mensagem</legend>
+					<div class="form-group">
+						<label for="Assunto">Assunto</label>
+						<input type="text" name="Assunto" id="Assunto" placeholder="Assunto" required="1" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="mensagem">Mensagem</label>
+						<textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem..." class="form-control"></textarea>
+					</div><button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
+				</fieldset>
+			</form>	
+		</div>
+	</section>
+	<div class="bar-footer"></div>
+	<div class="container-fluid footer">
+		<div class="container">
+			<footer>
+				<p class="pull-right"><a href="#">Voltar para o topo</a></p>
+				<p style="color:#FFF;">&copy; 2016 Fast Service - Todos os direitos reservados.</p>
+			</footer>
+		</div>
+	</div>
+    <!-- jQuery do Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

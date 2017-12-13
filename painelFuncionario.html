@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fast Service - Acesso ao sistema dos Funcionários</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.gif" type="image/x-icon" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/entrar.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script>
+		data = new Date();
+		dia = data.getDate();
+		mes = data.getMonth();
+		ano = data.getFullYear();
+		var hora    = data.getHours();          // 0-23
+		var min     = data.getMinutes();        // 0-59
+
+		meses = new Array(12);
+		meses[0] = "Janeiro";
+		meses[1] = "Fevereiro";
+		meses[2] = "Março";
+		meses[3] = "Abril";
+		meses[4] = "Maio";
+		meses[5] = "Junho";
+		meses[6] = "Julho";
+		meses[7] = "Agosto";
+		meses[8] = "Setembro";
+		meses[9] = "Outubro";
+		meses[10] = "Novembro";
+		meses[11] = "Dezembro";
+		
+
+		var pathArray = window.location.href.split( '/' );
+		var secondLevelLocation = pathArray[0];
+		var newPathname = new Array();
+		for (i = 0; i < pathArray.length; i++) {
+			newPathname += "/";
+			newPathname += pathArray[i];	
+		}
+		//window.document.write("<br>"+[newPathname.length-1]);		
+		var teste = [newPathname.length-1];
+		if(newPathname[teste] == '1'){
+			window.open('trocaSenha.html','','width=400,height=750');
+		}
+
+	</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="painelFuncionario.html">Painel de controle do Funcionário - Fast Service</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="painelFuncionario.html">Início</a></li>
+			<li><a href="cadastrarFoto.html">Cadastrar Foto</a></li>
+            <li><a href="alterarDadoFuncionario.html">Alterar dados</a></li>
+            <li><a href="servicosRealizados.html">Últimos serviços realizados</a></li>
+            <li><a href="index.html">Sair</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<div class="container">
+          <h1 class="page-header">Olá, Natália Joana</h1>
+            <div class="container" align="center">
+              <img src="img/domestica.jpg" alt="Imagem de perfil do usuário" title="Imagem de perfil do usuário"  height="200" class="img-circle" alt="Generic placeholder thumbnail">
+              <h4>Bem-vindo ao painel de controle dos funcionários Fast-Service.</h4>
+              <p class="text-muted">Neste local, você poderá verificar os seus serviços feitos, alteração de cadastro
+				e receber um orçamento de acordo com a necessidade dos clientes.</p>
+			  <p class="text-muted">
+				<script type="text/javascript">
+					document.write ("Dia e hora atual do sistema: " + dia + " de " + meses[mes] + " de " + ano + ", " + hora + ":" + min);
+				</script>
+			</p>
+            </div>
+          </div>
+		  </div>
+
+  </body>
+  <!-- jQuery do Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

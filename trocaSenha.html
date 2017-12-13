@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fast Service - Acesso ao sistema dos Funcionários</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.gif" type="image/x-icon" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/entrar.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <body>
+  <div class="container">
+	<center><img src="img/logo.png" alt="Logo da empresa Fast Service" title="Logo da empresa Fast Service" width="250px"  class="img-responsive" alt="LogoMarca da empresa Fast Service"/></center>
+    <form class="form-signin" id="form" action="#" onSubmit="alert('Alterado com sucesso!'); window.close();">
+		<h2 class="form-signin-heading text-center">Primeiro Acesso</h2>
+		<p class="text-muted text-center">Olá Natália, foi verificado que esse foi seu primeiro acesso. Então será necessário realizar a troca da sua senha provisória. Então, preencha os campos abaixo e altere agora mesmo!</p>
+        <label for="inputEmail" class="sr-only">Nova Senha</label>
+        <input type="password" id="senha" class="form-control" placeholder="Senha" required autofocus>
+        <label for="inputPassword" class="sr-only">Confirme sua senha</label>
+        <input type="password" id="inputPassword" class="form-control"  placeholder="Confirme sua senha" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Alterar</button>
+      </form>
+    </div>
+  </body>
+    <!-- jQuery do Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
